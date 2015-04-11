@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.version       = File.read("VERSION").strip
   gem.authors       = ["Anton Kuchinsky"]
   gem.email         = ["akuchinsky@gmail.com"]
-  gem.description   = %q{Amazon Redshift output plugin for Fluentd with creating table}
+  gem.description   = %q{Amazon Redshift output plugin for Fluentd with custom Redshift COPY timeformat}
   gem.summary       = gem.description
   gem.homepage      = "https://github.com/akuchins/fluent-plugin-redshift-anton"
   gem.has_rdoc      = false
