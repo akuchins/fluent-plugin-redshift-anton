@@ -36,6 +36,7 @@ Format:
         make_auto_table 1 # 1 => make table auto 0 => no
         tag_table 1 # 1=> tag_name = table_name, 0 => no, use redshift_atablename
         file_type [tsv|csv|json|msgpack]
+        delimiter nil # derived from file_type: \t for tsv, json, ',' for csv
         varchar_length ALL_COLUMNS_VARCHAR_LENGTH
 
 
@@ -126,7 +127,7 @@ Example (watch and upload json formatted apache log):
 
 + `file_type` : file format of the source data.  `csv`, `tsv`, `msgpack` or `json` are available.
 
-+ `delimiter` : delimiter of the source data. This option will be ignored if `file_type` is specified.
++ `delimiter` : delimiter of the source data. This option will be automatically set if `file_type` is specified.
 
 + `buffer_type` : buffer type.
 
