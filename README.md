@@ -75,7 +75,9 @@ Example (watch and upload json formatted apache log):
         redshift_user fluent
         redshift_password fluent-password
         redshift_tablename apache_log
+        redshift_copy_base_options TIMEFORMAT epochsecs
         file_type json
+	delimiter ,
 
         # buffer
         buffer_type file
