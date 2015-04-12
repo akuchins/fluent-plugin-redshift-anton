@@ -32,6 +32,7 @@ Format:
         redshift_password YOUR_AMAZON_REDSHIFT_CLUSTER_PASSWORD
         redshift_schemaname YOUR_AMAZON_REDSHIFT_CLUSTER_TARGET_SCHEMA_NAME
         redshift_tablename YOUR_AMAZON_REDSHIFT_CLUSTER_TARGET_TABLE_NAME
+        redshift_copy_base_options YOUR_REDSHIFT_COPY_CUSTOM_PARAMETERS
         make_auto_table 1 # 1 => make table auto 0 => no
         tag_table 1 # 1=> tag_name = table_name, 0 => no, use redshift_atablename
         file_type [tsv|csv|json|msgpack]
@@ -116,6 +117,8 @@ Example (watch and upload json formatted apache log):
 + `redshift_tablename` (required) : table name to store data.
 
 + `redshift_schemaname` : schema name to store data. By default, this option is not set and find table without schema as your own search_path.
+
++ `redshift_copy_base_options` : additional options to pass the Redshift COPY command, such as TIMEFORMAT.
 
 + `make_auto_table` (optional, integer) : whether make tables automatically. If you set 1, this makes tables automatically else if you set 0, doesn't make.
 
